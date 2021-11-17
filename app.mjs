@@ -57,11 +57,11 @@ app.post('/contact', (req, res) => {
       email: req.body.email,
       //address: req.body.address
     });
-    newContact.save();
-//     newContact.save().then(() => {
-//       console.log('contact created success')
-//       res.send('contact created');
-//     });
+    
+    newContact.save().then(() => {
+      console.log('contact created success')
+      res.send('contact created');
+    });
   }
 })
 app.put('/contact/:id', (req, res) => {

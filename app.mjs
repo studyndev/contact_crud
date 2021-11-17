@@ -59,7 +59,7 @@ app.post('/contact', (req, res) => {
     });
     newContact.save().then(() => {
       console.log('contact created success')
-      res.send({name,email});
+      res.send('contact created');
     });
   }
 })

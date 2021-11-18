@@ -58,10 +58,7 @@ app.post('/contact', (req, res) => {
       //address: req.body.address
     });
     
-    newContact.save().then(() => {
-      console.log('contact created success')
-      res.send('contact created');
-    });
+    newContact.save().then(res.send(newContact))
   }
 })
 app.put('/contact/:id', (req, res) => {
